@@ -1,0 +1,246 @@
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        //ToolBar
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="center"
+                android:background="#1852a6"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:logo="@drawable/logo_top">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    //Notification Bell
+
+                    <include layout="@layout/bell_layout" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:background="@drawable/logo"
+                android:backgroundTint="@color/gray"
+                android:backgroundTintMode="screen">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/tab1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp"
+                        app:cardMaxElevation="5dp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            //Title We Raise As One
+
+                            <RelativeLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/pic1" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="sans-serif"
+                                            android:text="We raise "
+                                            android:textAllCaps="true"
+                                            android:textColor="@color/white"
+                                            android:textSize="40dp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="sans-serif"
+                                            android:text="as one"
+                                            android:textAllCaps="true"
+                                            android:textColor="@color/white"
+                                            android:textSize="40dp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="#0075E0"
+                                            android:padding="5dp"
+                                            android:text="Coronavirus"
+                                            android:textAllCaps="true"
+                                            android:textColor="@color/white"
+                                            android:textSize="20dp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@color/black"
+                                            android:padding="5dp"
+                                            android:text="Response"
+                                            android:textAllCaps="true"
+                                            android:textColor="@color/white"
+                                            android:textSize="20dp" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                            //Learn More
+
+                            <RelativeLayout
+                                android:id="@+id/tab2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tab1"
+                                android:background="@color/white"
+                                android:gravity="bottom"
+                                android:orientation="vertical"
+                                android:paddingLeft="20dp"
+                                android:paddingTop="20dp"
+                                android:paddingRight="20dp"
+                                android:paddingBottom="10dp">
+
+                                <TextView
+                                    android:id="@+id/text1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="Learn more about how were responding to COVID-19"
+                                    android:textAlignment="center"
+                                    android:textColor="#0075E0"
+                                    android:textSize="25dp"
+                                    android:textStyle="bold" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/text1"
+                                    android:layout_centerHorizontal="true"
+
+                                    android:layout_gravity="center">
+
+                                    <TextView
+                                        android:id="@+id/tell"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerHorizontal="true"
+                                        android:text="Tell me more"
+                                        android:textAlignment="center" />
+
+                                    <ImageView
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_toRightOf="@id/tell"
+
+                                        android:src="@drawable/baseline_expand_more_18" />
+                                </RelativeLayout>
+
+
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    //Recycler CardView
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tab1">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbars="vertical">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    //Navigation Drawer
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu" />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,15 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:background="#1852a6">
+
+    //Navigation Drawer Layout
+
+    <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/logo_top" />
+
+</LinearLayout>
